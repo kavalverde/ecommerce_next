@@ -38,10 +38,10 @@ export const authOptions: NextAuthOptions = {
         );
       },
     }),
-    GithubProvider({
+    /*  GithubProvider({
       clientId: process.env.GITHUB_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
-    }),
+    }), */
   ],
 
   //custom Pages
