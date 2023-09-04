@@ -1,7 +1,7 @@
 import { dbUsers } from "@/database";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import GithubProvider from "next-auth/providers/github";
+//import GithubProvider from "next-auth/providers/github";
 
 declare module "next-auth" {
   interface Session {
@@ -63,12 +63,12 @@ export const authOptions: NextAuthOptions = {
         token.accessToken = account.access_token;
 
         switch (account.type) {
-          case "oauth":
+          /*  case "oauth":
             token.user = await dbUsers.oAuthToDBUser(
               user?.email || "",
               user?.name || ""
             );
-            break;
+            break; */
 
           case "credentials":
             token.user = user;
